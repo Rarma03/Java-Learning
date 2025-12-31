@@ -1,7 +1,25 @@
 package chapter04;
 
 enum Status {
-    Running, Await, Failed, Successfull;
+    Running(100), Await(200), Failed, Successfull(4000);
+
+    private int p;
+
+    private Status() {
+        p = 0; // default value
+    }
+
+    private Status(int p) {
+        this.p = 500;
+    }
+
+    private int getPrice() {
+        return p;
+    }
+
+    private void setPrice(int p) {
+        this.p = p;
+    }
 }
 
 public class Enum {
