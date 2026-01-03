@@ -29,5 +29,11 @@ public class RunnableCreation {
 
         t1.start();
         t2.start();
+
+        // lambda way to define Runnable object
+        Runnable obj3 = () -> {
+            for (int i = 0; i < 5; i++)
+                System.out.println("A");
+        };
     }
 }
